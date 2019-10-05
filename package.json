@@ -1,0 +1,34 @@
+{
+  "name": "@affandes/pivotjs",
+  "version": "1.0.0",
+  "description": "Convert JSON Table to JSON Pivot",
+  "main": "dist/pivot.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "webpack",
+    "build": "webpack --mode=production --output-filename=pivot.min.js"
+  },
+  "keywords": [
+    "pivot",
+    "pivotjs"
+  ],
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "author": {
+    "name": "Muhammad Affandes",
+    "email": "affandes@gmail.com",
+    "web": "https://twitter.com/affandes"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  }
+}
