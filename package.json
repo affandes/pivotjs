@@ -1,6 +1,6 @@
 {
   "name": "@affandes/pivotjs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Convert JSON Table to JSON Pivot",
   "main": "dist/pivot.js",
   "scripts": {
