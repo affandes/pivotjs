@@ -1,4 +1,4 @@
-const data = [
+const baruInput = [
     {no: 1, merk: 'Audi', type: 'V8', tyre: 17, prod: 2000, price: 1453},
     {no: 2, merk: 'Toyota', type: 'V7', tyre: 18, prod: 2001, price: 1720},
     {no: 3, merk: 'Honda', type: 'V8', tyre: 17, prod: 2002, price: 1260},
@@ -20,4 +20,4 @@ const data = [
     {no: 19, merk: 'Honda', type: 'V8', tyre: 17, prod: 2003, price: 1188},
     {no: 20, merk: 'Suzuki', type: 'V8', tyre: 17, prod: 2002, price: 1411},
 ];
-export default data;
+export default baruInput;
