@@ -105,22 +105,22 @@ var PivotJs = function (table) {
             values = {};
         }
         val.forEach(v => {
-            if( values[v.name] === undefined ) {
-                values[v.name] = agregate(null, row[v.name], v.type)
+            if( values[v.label] === undefined ) {
+                values[v.label] = agregate(null, row[v.name], v.type)
             } else {
-                values[v.name] = agregate(values[v.name], row[v.name], v.type)
+                values[v.label] = agregate(values[v.label], row[v.name], v.type)
             }
 
             if( col.length > 0 ) {
                 let filter = col[0];
                 let keys = summary()[filter.name].values;
                 keys.forEach(vx => {
-                    let key = v.name + ":" + vx;
+                    let key = v.label + ":" + vx;
                     if( values[key] === undefined ) {
                         values[key] = null
                     }
                 });
-                let key = v.name + ":" + row[filter.name];
+                let key = v.label + ":" + row[filter.name];
                 values[key] = agregate(values[key], row[filter.name], v.type)
             }
         });

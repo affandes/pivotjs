@@ -124,13 +124,13 @@ test('Pivoting', () => {
     let obj = new PivotJs(demo01);
     let result = obj.groupBy({name: 'merk', label: 'Merk'})
         .columnBy({name: 'tyre', label: 'Tyre'})
-        .valueBy({name: 'price', type: 'average', label: 'Bla'})
-        .valueBy({name: 'prod', type: 'count', label: 'Bla'})
+        .valueBy({name: 'price', type: 'average', label: 'Harga Unit'})
+        .valueBy({name: 'prod', type: 'count', label: 'Tahun Produksi'})
         .toPivot();
     expect(result).toEqual({
         "Audi": {
             "values": {
-                "price": {
+                "Harga Unit": {
                     "avg": 1444.5,
                     "count": 4,
                     "max": 1910,
@@ -138,7 +138,7 @@ test('Pivoting', () => {
                     "sum": 5778,
                     "val": 1444.5
                 },
-                "price:17": {
+                "Harga Unit:17": {
                     "avg": 17,
                     "count": 1,
                     "max": 17,
@@ -146,7 +146,7 @@ test('Pivoting', () => {
                     "sum": 17,
                     "val": 17
                 },
-                "price:18": {
+                "Harga Unit:18": {
                     "avg": 18,
                     "count": 3,
                     "max": 18,
@@ -154,7 +154,7 @@ test('Pivoting', () => {
                     "sum": 54,
                     "val": 18
                 },
-                "prod": {
+                "Tahun Produksi": {
                     "avg": 2002,
                     "count": 4,
                     "max": 2003,
@@ -162,7 +162,7 @@ test('Pivoting', () => {
                     "sum": 8008,
                     "val": 4
                 },
-                "prod:17": {
+                "Tahun Produksi:17": {
                     "avg": 17,
                     "count": 1,
                     "max": 17,
@@ -170,7 +170,7 @@ test('Pivoting', () => {
                     "sum": 17,
                     "val": 1
                 },
-                "prod:18": {
+                "Tahun Produksi:18": {
                     "avg": 18,
                     "count": 3,
                     "max": 18,
@@ -182,7 +182,7 @@ test('Pivoting', () => {
         },
         "Honda": {
             "values": {
-                "price": {
+                "Harga Unit": {
                     "avg": 1288,
                     "count": 5,
                     "max": 1481,
@@ -190,7 +190,7 @@ test('Pivoting', () => {
                     "sum": 6440,
                     "val": 1288
                 },
-                "price:17": {
+                "Harga Unit:17": {
                     "avg": 17,
                     "count": 5,
                     "max": 17,
@@ -198,8 +198,8 @@ test('Pivoting', () => {
                     "sum": 85,
                     "val": 17
                 },
-                "price:18": null,
-                "prod": {
+                "Harga Unit:18": null,
+                "Tahun Produksi": {
                     "avg": 2001.2,
                     "count": 5,
                     "max": 2003,
@@ -207,7 +207,7 @@ test('Pivoting', () => {
                     "sum": 10006,
                     "val": 5
                 },
-                "prod:17": {
+                "Tahun Produksi:17": {
                     "avg": 17,
                     "count": 5,
                     "max": 17,
@@ -215,12 +215,12 @@ test('Pivoting', () => {
                     "sum": 85,
                     "val": 5
                 },
-                "prod:18": null
+                "Tahun Produksi:18": null
             }
         },
         "Suzuki": {
             "values": {
-                "price": {
+                "Harga Unit": {
                     "avg": 1343.7142857142858,
                     "count": 7,
                     "max": 1720,
@@ -228,7 +228,7 @@ test('Pivoting', () => {
                     "sum": 9406,
                     "val": 1343.7142857142858
                 },
-                "price:17": {
+                "Harga Unit:17": {
                     "avg": 17,
                     "count": 4,
                     "max": 17,
@@ -236,7 +236,7 @@ test('Pivoting', () => {
                     "sum": 68,
                     "val": 17
                 },
-                "price:18": {
+                "Harga Unit:18": {
                     "avg": 18,
                     "count": 3,
                     "max": 18,
@@ -244,7 +244,7 @@ test('Pivoting', () => {
                     "sum": 54,
                     "val": 18
                 },
-                "prod": {
+                "Tahun Produksi": {
                     "avg": 2001.7142857142858,
                     "count": 7,
                     "max": 2003,
@@ -252,7 +252,7 @@ test('Pivoting', () => {
                     "sum": 14012,
                     "val": 7
                 },
-                "prod:17": {
+                "Tahun Produksi:17": {
                     "avg": 17,
                     "count": 4,
                     "max": 17,
@@ -260,7 +260,7 @@ test('Pivoting', () => {
                     "sum": 68,
                     "val": 4
                 },
-                "prod:18": {
+                "Tahun Produksi:18": {
                     "avg": 18,
                     "count": 3,
                     "max": 18,
@@ -272,7 +272,7 @@ test('Pivoting', () => {
         },
         "Toyota": {
             "values": {
-                "price": {
+                "Harga Unit": {
                     "avg": 1618.25,
                     "count": 4,
                     "max": 1829,
@@ -280,7 +280,7 @@ test('Pivoting', () => {
                     "sum": 6473,
                     "val": 1618.25
                 },
-                "price:17": {
+                "Harga Unit:17": {
                     "avg": 17,
                     "count": 1,
                     "max": 17,
@@ -288,7 +288,7 @@ test('Pivoting', () => {
                     "sum": 17,
                     "val": 17
                 },
-                "price:18": {
+                "Harga Unit:18": {
                     "avg": 18,
                     "count": 3,
                     "max": 18,
@@ -296,7 +296,7 @@ test('Pivoting', () => {
                     "sum": 54,
                     "val": 18
                 },
-                "prod": {
+                "Tahun Produksi": {
                     "avg": 2001,
                     "count": 4,
                     "max": 2002,
@@ -304,7 +304,7 @@ test('Pivoting', () => {
                     "sum": 8004,
                     "val": 4
                 },
-                "prod:17": {
+                "Tahun Produksi:17": {
                     "avg": 17,
                     "count": 1,
                     "max": 17,
@@ -312,7 +312,7 @@ test('Pivoting', () => {
                     "sum": 17,
                     "val": 1
                 },
-                "prod:18": {
+                "Tahun Produksi:18": {
                     "avg": 18,
                     "count": 3,
                     "max": 18,
