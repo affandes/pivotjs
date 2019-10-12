@@ -1,4 +1,4 @@
-import PivotJs from '../src/index'
+import PivotJs from '../dist/pivot.min'
 import demo01 from './fixtures/input.demo01'
 
 test('Load data demo01', () => {
